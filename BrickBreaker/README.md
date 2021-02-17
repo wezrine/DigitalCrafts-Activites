@@ -1,0 +1,1 @@
+This activity was to create a Brick Breaker type layout in html/css using positioning, margins and padding. My current code is a work in progress, as I would like to touch up the container's wrapper to include score.
