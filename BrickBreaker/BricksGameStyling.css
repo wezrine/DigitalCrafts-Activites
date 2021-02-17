@@ -1,0 +1,56 @@
+
+.container {
+    background-color: black;
+    margin: 20px 20px 0px 20px;
+    padding: 20px 1px 1px 1px;
+}
+
+.row {
+    display: table;
+}
+
+.BlackBlock{
+        display: table-cell;
+        height: 20px;
+        width: 60px;
+        background-color: black;
+        border: solid 1px black;
+        margin: 0;
+}
+
+.RedBlock {
+    display: table-cell;
+    height: 20px;
+    width: 60px;
+    background-color: red;
+    border: solid 1px black;
+    margin: 0;
+}
+
+.YellowBlock {
+    display: table-cell;
+    height: 20px;
+    width: 60px;
+    background-color: yellow;
+    border: solid 1px black;
+    margin: 0;
+}
+
+.GreenBlock {
+    display: table-cell;
+    height: 20px;
+    width: 60px;
+    background-color: green;
+    border: solid 1px black;
+    margin: 0;
+}
+
+.BlueBlock {
+    display: table-cell;
+    height: 20px;
+    width: 60px;
+    background-color: blue;
+    border: solid 1px black;
+    margin: 0;
+}
+
