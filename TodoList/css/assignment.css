@@ -1,0 +1,11 @@
+#bodyy {
+    background-color: aqua;
+}
+.task {
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+    width: 400px;
+    margin: 5px;
+    border: 1px solid black;
+}
