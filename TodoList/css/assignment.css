@@ -1,11 +1,36 @@
-#bodyy {
-    background-color: aqua;
-}
-.task {
-    display: flex;
+body {
     background-color: white;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+
+#header {
+    display: flex;
     justify-content: space-around;
-    width: 400px;
+    background-color: #0072b1;
+    color: white;
+    width: 100%;
     margin: 5px;
     border: 1px solid black;
 }
+
+#taskTextBox {
+    width: 60%;
+}
+
+.task {
+    display: flex;
+    color: white;
+    background-color: #0072b1;
+    justify-content: space-around;
+    width: 100%;
+    min-height: 20px;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+/* .removeButton {
+    justify-content: right;
+} */

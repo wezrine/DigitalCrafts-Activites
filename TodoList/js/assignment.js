@@ -1,5 +1,5 @@
 let taskTextBox = document.getElementById("taskTextBox")
-taskTextBox.placeholder = "Complete this assignment"
+taskTextBox.placeholder = "Enter a task"
 
 let taskListPending = document.getElementById("taskListPending")
 let taskListCompleted = document.getElementById("taskListCompleted")
@@ -29,11 +29,16 @@ btnAddTask.addEventListener("click",function() {
     taskLabel.innerHTML = taskTextBox.value
     task.appendChild(taskLabel)
 
+
+    // creates remove button
     let removeButton = document.createElement("button")
-    removeButton.innerHTML = "Remove"
+    removeButton.className = "removeButton"
+    removeButton.innerHTML = "X"
     removeButton.addEventListener("click",function() {
-        taskListPending.removeChild(this.parentElement)
+        this.parentElement.remove()
     })
     task.appendChild(removeButton)
 
+    // clear text box
+    taskTextBox.value = ""
 })
