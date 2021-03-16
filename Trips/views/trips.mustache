@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+    <body>
+        <h1>Trips</h1>
+
+        <a href="/add-trip">Add Trip</a>
+        
+        <h3>Total Number of Trips: {{totalTrips}}</h3>
+        <ul>
+            {{#allTrips}} <!-- Start of the loop --> 
+
+            <li>
+                {{title}} :  {{departureDate}} - {{returnDate}}
+            </li>
+            <div><image src={{imgURL}} width=150px></div>
+            
+
+            {{/allTrips}} <!-- End of the loop --> 
+        </ul>
+
+            <form method="POST" action="/create-trip">
+                <input type="text" placeholder="Enter title" name="title" />       
+                <input type="text" placeholder="Enter departure date" name="departureDate" />       
+                <input type="text" placeholder="Enter return date" name="returnDate" />
+                <input type="text" placeholder="Enter image URL" name="imgURL" />       
+                <button>Add</button>
+            </form>
+
+    </body>
+</html>
+

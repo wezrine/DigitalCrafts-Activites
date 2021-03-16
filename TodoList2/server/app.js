@@ -29,19 +29,6 @@ app.post("/todos", (req, res) => {
     res.json({message: "Todo has been added!"})
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.listen(3000, () => {
     console.log("Server is running...")
 })
