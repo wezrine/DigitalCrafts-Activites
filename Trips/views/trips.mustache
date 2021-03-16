@@ -1,33 +1,34 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../styles.css" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trips</title>
+        <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <h1>Trips</h1>
-
-        <a href="/add-trip">Add Trip</a>
+        <div id="header">
+            <h1>Trips</h1>
+            <a href="/add-trip">Add Trip</a>
+        </div>
         
-        <h3>Total Number of Trips: {{totalTrips}}</h3>
-        <ul>
-            {{#allTrips}} <!-- Start of the loop --> 
-
-            <li>
-                {{title}} :  {{departureDate}} - {{returnDate}}
-            </li>
-            <div><image src={{imgURL}} width=150px></div>
-            
-
-            {{/allTrips}} <!-- End of the loop --> 
-        </ul>
-
-            <form method="POST" action="/create-trip">
-                <input type="text" placeholder="Enter title" name="title" />       
-                <input type="text" placeholder="Enter departure date" name="departureDate" />       
-                <input type="text" placeholder="Enter return date" name="returnDate" />
-                <input type="text" placeholder="Enter image URL" name="imgURL" />       
-                <button>Add</button>
+        <div id="container">
+            <h3>You have {{totalTrips}} trips planned:</h3>
+            {{#allTrips}}
+            <form class="trip_container" method = "POST" action="/delete-trip">
+                <input type="hidden" value="{{tripId}}" name="tripId">
+                <div class="trip_div">
+                    {{title}}:  {{departureDate}} - {{returnDate}}
+                </div>
+                <div class="img_div">
+                    <image src={{imgURL}} width=150px>
+                </div>
+                <div class="button_div">
+                    <button class="delete_button">Delete</button>
+                </div>
             </form>
-
+            {{/allTrips}}
+        <div>
     </body>
 </html>
 
