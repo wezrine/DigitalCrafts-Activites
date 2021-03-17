@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Details</title>
+        <link rel="stylesheet" href="/styles.css" />
+    </head>
+    <body>
+       <div id="header">
+            <h1>Movie Details</h1>
+        </div>
+        <div id="container">
+            <div class="movie_container">
+                <form method="POST" action="/movies/delete-movie">
+                    <input type="hidden" value="{{movieId}}" name="movieId">
+                    <div class="movie_div">
+                        {{title}}:  {{description}} - {{genre}}
+                    </div>
+                    <div class="img_div">
+                        <image src={{imgURL}} width=150px>
+                    </div>
+                    <div class="button_div">
+                        <button class="delete_button">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

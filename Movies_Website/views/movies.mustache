@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movies</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+       <div id="header">
+            <h1>Movies</h1>
+            <form id="genreSearchForm">
+                <select>
+                    <option disabled>Search by Genre</option>
+                    <option value="action">Action</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="animation">Animation</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="crime">Crime</option>
+                    <option value="drama">Drama</option>
+                    <option value="fantasy">fantasy</option>
+                    <option value="horror">Horror</option>
+                    <option value="kids">Kids</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="romance">Romance</option>
+                    <option value="sci-fi">Sci-Fi</option>
+                    <option value="superhero">Superhero</option>
+                    <option value="thriller">Thriller</option>
+                </select>
+            </form>
+        </div>
+        <div id="addMovieButton_container">
+            <button id="addMovieButton">Add a movie to the database</button>
+            <form id="addMovieForm"></form>
+        </div>
+
+        <div id="container">
+            {{#allMovies}}
+            <div class="movie_container">
+                    <div class="movie_div">
+                        {{title}}
+                    </div>
+                    <div class="img_div">
+                        <image src={{imgURL}} width=150px>
+                    </div>
+                    <div class="button_div">
+                        <a href="/movies/{{movieId}}">
+                            <button class="details_button">Details</button>
+                        </a>
+                    </div>
+            </div>
+            {{/allMovies}}
+        </div>
+
+
+        <script src="/addMovie.js"></script>
+    </body>
+</html>
