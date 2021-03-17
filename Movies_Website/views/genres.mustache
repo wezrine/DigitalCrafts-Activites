@@ -9,8 +9,8 @@
     <body>
        <div id="header">
             <h1>Movies</h1>
-            <form id="genreSearchForm" method="GET" action="movies/genre/{{genreSelect.value}}">
-                <select name="genre" onchange="this.form.submit()" id="genreSelect">
+            <form id="genreSearchForm" method="GET" action="/movies">
+                <select name="genre" onchange="javascript:this.form.submit()">
                     <option selected disabled>Search by Genre</option>
                     <option value="action">Action</option>
                     <option value="adventure">Adventure</option>
@@ -18,7 +18,7 @@
                     <option value="comedy">Comedy</option>
                     <option value="crime">Crime</option>
                     <option value="drama">Drama</option>
-                    <option value="fantasy">Fantasy</option>
+                    <option value="fantasy">fantasy</option>
                     <option value="horror">Horror</option>
                     <option value="kids">Kids</option>
                     <option value="mystery">Mystery</option>
@@ -51,6 +51,7 @@
             </div>
             {{/allMovies}}
         </div>
+
 
         <script src="/addMovie.js"></script>
     </body>

@@ -23,6 +23,12 @@ router.post('/create-movie', (req, res) => {
     res.redirect('/movies')
 })
 
+router.get('/genre/:genre', (req, res) => {
+    const genre = document.getElementById("genreSelect").value
+    console.log(genre)
+    res.render('genres')
+})
+
 router.get('/:movieId', (req, res) => {
     const movieId = req.params.movieId
     let movie = movies.find((movie) => movie.movieId == movieId)
