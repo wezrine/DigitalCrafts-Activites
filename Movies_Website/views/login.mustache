@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div id="header">
+            <h1>Login</h1>
+        </div>
+        <div id="loginContainer">
+            <form method="POST" action="/login">
+                <input type="text" placeholder="username" name="username"/>
+                <input type="password" placeholder="password" name="password"/>
+                <button>Login</button>
+            </form>
+            <div>
+                {{message}}
+            </div>
+            <a href="/movies">
+                <button>Continue as Guest</button>
+            </a>
+            <a href="/register">
+                <button>Register</button>
+            </a>
+        </div>
+
+
+    </body>
+</html>
+

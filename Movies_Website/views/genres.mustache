@@ -4,13 +4,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Movies</title>
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="/styles.css" />
     </head>
     <body>
        <div id="header">
-            <h1>Movies</h1>
-            <form id="genreSearchForm" method="GET" action="/movies">
-                <select name="genre" onchange="javascript:this.form.submit()">
+            <div class="header_content_div">
+                <h1>{{genre}} Movies</h1>
+            </div>
+            <div class="dropdown_div">
+                <select name="genre" id="genreSelectDropdown">
                     <option selected disabled>Search by Genre</option>
                     <option value="action">Action</option>
                     <option value="adventure">Adventure</option>
@@ -18,7 +20,7 @@
                     <option value="comedy">Comedy</option>
                     <option value="crime">Crime</option>
                     <option value="drama">Drama</option>
-                    <option value="fantasy">fantasy</option>
+                    <option value="fantasy">Fantasy</option>
                     <option value="horror">Horror</option>
                     <option value="kids">Kids</option>
                     <option value="mystery">Mystery</option>
@@ -27,7 +29,7 @@
                     <option value="superhero">Superhero</option>
                     <option value="thriller">Thriller</option>
                 </select>
-            </form>
+            </div>
         </div>
         <div id="addMovieButton_container">
             <button id="addMovieButton">Add a movie to the database</button>
@@ -35,7 +37,7 @@
         </div>
 
         <div id="container">
-            {{#allMovies}}
+            {{#genreMovies}}
             <div class="movie_container">
                     <div class="movie_div">
                         {{title}}
@@ -48,10 +50,15 @@
                             <button class="details_button">Details</button>
                         </a>
                     </div>
-            </div>
-            {{/allMovies}}
-        </div>
 
+            </div>
+            {{/genreMovies}}
+            {{#message}}
+            <div>
+                <h3 class="no_genre_message">{{message}}</h3>
+            </div>
+            {{/message}}
+        </div>
 
         <script src="/addMovie.js"></script>
     </body>

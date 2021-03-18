@@ -15,7 +15,9 @@
                 <form method="POST" action="/movies/delete-movie">
                     <input type="hidden" value="{{movieId}}" name="movieId">
                     <div class="movie_div">
-                        {{title}}:  {{description}} - {{genre}}
+                        <h2>{{title}}</h2>
+                        <h6>{{genre}}</h6>
+                        <h6>{{description}}</h6>
                     </div>
                     <div class="img_div">
                         <image src={{imgURL}} width=150px>

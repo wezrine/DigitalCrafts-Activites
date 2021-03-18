@@ -24,9 +24,16 @@ router.post('/create-movie', (req, res) => {
 })
 
 router.get('/genre/:genre', (req, res) => {
-    const genre = document.getElementById("genreSelect").value
-    console.log(genre)
-    res.render('genres')
+    const genre = req.params.genre
+
+    genreMovies = movies.filter((movie) => {
+        return movie.genre == genre
+    })
+    if (genreMovies.length == 0) {
+        return res.render('genres', {genre: capitalizeFirstLetter(genre), message: "No movies of this genre are in tha database. You should add one!"})
+    } else {
+        return res.render('genres', {genre: capitalizeFirstLetter(genre), genreMovies: genreMovies})
+    }
 })
 
 router.get('/:movieId', (req, res) => {
@@ -47,3 +54,9 @@ router.post('/delete-movie', (req, res) => {
 })
 
 module.exports = router
+
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+  

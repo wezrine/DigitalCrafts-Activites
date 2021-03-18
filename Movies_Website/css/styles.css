@@ -20,8 +20,8 @@ a {
 a:visited {
     color: white;
 }
-#genreSearchForm {
-    text-align: center;
+.dropdown_div {
+    padding: 1em;
 }
 #addMovieButton_container {
     display: flex;
@@ -73,4 +73,22 @@ form {
     justify-content: center;
     margin: 0;
     font-size: 1.2em;
+}
+#loginContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+}
+.no_genre_message {
+    color: white;
+    font-size: 1em;
+    margin: 0.2em;
+}
+h2 {
+    margin: 0.5em;
+}
+h6 {
+    margin: 0.3em;
 }

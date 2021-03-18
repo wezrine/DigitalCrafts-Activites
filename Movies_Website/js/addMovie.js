@@ -28,3 +28,12 @@ addMovieButton.addEventListener('click', function() {
         </form>
     `
 })
+
+const genreSelectDropdown = document.getElementById("genreSelectDropdown")
+
+genreSelectDropdown.addEventListener('change', function() {
+    window.location = `/movies/genre/${this.value}`
+})
+
+
+// onchange="this.form.submit()"
