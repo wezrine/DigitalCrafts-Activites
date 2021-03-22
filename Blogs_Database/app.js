@@ -5,6 +5,8 @@ const app = express()
 // initializing pg promise 
 const pgp = require('pg-promise')() 
 
+app.use(express.static('css'))
+
 // connection string 
 const connectionString = 'postgres://localhost:5432/blogs'
 const db = pgp(connectionString)
@@ -30,15 +32,12 @@ app.get('/add-blog', (req, res) => {
 
 app.post('/add-blog', (req, res) => {
 
-    console.log(req.body)
-
     const title = req.body.title 
     const body = req.body.body
     const isPublished = req.body.isPublished == "on" ? true : false 
 
     db.none('INSERT INTO blogs(title, body, is_published) VALUES($1, $2, $3)',[title, body, isPublished])
     .then(() => {
-        console.log("HERE!")
         res.redirect('/')
     }) 
 })
