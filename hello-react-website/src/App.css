@@ -1,0 +1,65 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  background: #282c34;
+  padding: 2em;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  background-color: #2867B2;
+  color: white;
+}
+
+.header h1 {
+  margin: 1rem;
+  align-self: center;
+}
+
+.header h2 {
+  margin: 1rem;
+  align-self: center;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  background-color: lightgray;
+}
+
+.feature h1 {
+  padding: 0 0 0 1rem;
+  color: #282c34;
+}
+
+.feature p {
+  padding: 0 1rem 0 1rem;
+  text-align: justify;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  background-color: #f2f2f2;
+}
+
+.article h1 {
+  color: #2867B2;
+  padding: 0 0 0 1rem;
+}
+
+.article p {
+  padding: 0 1rem 0 1rem;
+  text-align: justify;
+}
+
+.article .row {
+  display: flex;
+  width: 20rem;
+  justify-content: space-between;
+  margin: 0 0 0 1rem;
+}
