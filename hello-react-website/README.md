@@ -4,4 +4,4 @@ The goal of this assignment was to copy a template of a website given by the ins
 
 # Result
 
-![image](../public/screenshot.png)
+![image](screenshot.png)
