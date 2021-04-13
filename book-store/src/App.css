@@ -1,0 +1,68 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f2;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2867B2;
+  color: white;
+}
+
+.header h1 {
+  margin: 1rem;
+  align-self: center;
+}
+
+.header h2 {
+  margin: 1rem;
+  align-self: center;
+}
+
+.booksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.booksContainer .book {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 7rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.booksContainer .book h6 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  white-space: normal;
+  margin: 0;
+  font-weight: 
+}
+
+.booksContainer .book .author {
+  margin-top: 0.5rem;
+}
+
+
+.booksContainer .book img {
+  height: 150px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #2867B2;
+  color: white;
+}
+
+
