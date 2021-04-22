@@ -1,0 +1,161 @@
+html {
+    background: #f2f2f2
+}
+
+/* Menu */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background: #2867B2;
+    color: white;
+}
+
+.nav h1 {
+    margin: 0.5em;
+    align-self: center;
+}
+
+.nav .nav-links {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    width: 25em;
+    margin-right: 1em;
+}
+
+.nav .nav-links .link{
+    color: white;
+    text-decoration: none !important;
+}
+
+.nav .nav-links .link:hover{
+    color: white;
+    text-decoration: none !important;
+}
+
+/* Login */
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container input {
+    width: 15em;
+    margin: 0.25em;
+}
+
+.login-container button {
+    margin: 1em;
+    width: 5em;
+}
+
+.content {
+    background: #f2f2f2;
+    text-align: -webkit-center;
+    height: 100vh;
+    padding: 2em;
+}
+
+/* Books */
+
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    justify-content: space-evenly;
+}
+
+.books-page {
+    background: #f2f2f2;
+    height: 100%;
+    text-align: center;
+    padding: 1em 3em 1em 3em;
+}
+
+.books-page h3 {
+    margin: 0 0 1em 0;
+}
+
+.books-container .book {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 7rem;
+    margin: 0.5em;
+    padding: 0.5em;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2eecba6;
+    border: 1px solid grey;
+    border-left: 5px rgb(143, 56, 56) solid;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3;
+    box-shadow: grey 2px 1px;
+}
+
+.book h4 {
+    font-size: .9em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    white-space: normal;
+    margin: 0;
+}
+
+.book h5 {
+    margin: 0;
+    font-size: 0.7em;
+    font-style: italic;
+    margin: 0.5em 0 0.5em 0;
+}
+
+.book img {
+    height: 150px;
+}
+
+.add-book-input {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    align-items: center;
+    width: 20em;
+    border: 2px solid #2867B2;
+    border-radius: 25%;
+    background: #2867B2;
+    color: white;
+}
+
+.add-book-input h1 {
+    justify-content: center;
+}
+
+.add-book-input input {
+    margin: 0.5em;
+    width: 15em;
+}
+
+.add-book-input button {
+    margin: 0.5em;
+    width: 5em;
+    border-radius: 5em;
+    border: none;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: center;
+    background: #2867B2;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-row h6 {
+    margin: 0.5em;
+}
